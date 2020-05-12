@@ -132,12 +132,16 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
-var _default =
+
+var loginRes;var _default =
 {
   data: function data() {
     return {};
   },
-  methods: {} };exports.default = _default;
+  onLoad: function onLoad() {
+    loginRes = this.checkLogin('../my/my', 2);
+    if (!loginRes) return;
+  } };exports.default = _default;
 
 /***/ })
 

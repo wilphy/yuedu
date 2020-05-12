@@ -3,11 +3,15 @@
 </template>
 
 <script>
+var loginRes;
 export default {
 	data() {
 		return {};
 	},
-	methods: {}
+	onLoad: function() {
+		loginRes = this.checkLogin('../my/my', 2);
+		if (!loginRes) return;
+	}
 };
 </script>
 
